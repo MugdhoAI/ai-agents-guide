@@ -2,6 +2,8 @@
 
 A practical guide to understanding, building, and working with AI agents.
 
+[Live Guide](https://mugdhoai.github.io/ai-agents-guide/)
+
 ## Overview
 
 AI agents are systems that use models to interpret goals, decide what to do, use available tools, and produce results. This repository collects the core concepts and practical patterns needed to understand how agent systems work.
