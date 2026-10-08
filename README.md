@@ -12,12 +12,16 @@ This repository explains those ideas through practical examples and focused guid
 
 The live guide currently includes:
 
+* Freebuff
 * OpenAI Codex
 * Claude Code
 * Hermes
-* Freebuff
 
-Freebuff is the dedicated free option covered by the guide. The other sections document separate agents and their own setup.
+Freebuff is the free option covered by the guide. The other sections document separate agents and their own setup, including any required accounts, plans, or providers.
+
+## Start here
+
+If you want a free way to start using AI for coding, begin with the Freebuff guide on the live site. If you already use another agent, choose its guide and follow its own installation and account requirements.
 
 ## Core concepts
 
