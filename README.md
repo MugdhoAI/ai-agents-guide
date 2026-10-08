@@ -1,22 +1,31 @@
 # AI Agents Guide
 
-A practical guide to understanding, building, and working with AI agents.
+A practical guide to understanding AI agents, working with coding agents, writing better prompts, and getting more reliable results.
 
-[Live Guide](https://mugdhoai.github.io/ai-agents-guide/)
+[Open the guide](https://mugdhoai.github.io/ai-agents-guide/)
 
-## Overview
+## What this is
 
-AI agents are systems that use models to interpret goals, decide what to do, use available tools, and produce results. This repository collects the core concepts and practical patterns needed to understand how agent systems work.
+AI agents combine a model with instructions, context, tools, and an execution loop. Instead of only generating text, an agent can inspect information, choose actions, use tools, observe results, and continue until a task is complete.
 
-The focus is on clear explanations and small, understandable examples rather than unnecessary framework complexity.
+This repository explains those ideas through practical examples and focused guides. The goal is to understand what is happening under the hood, not just learn another framework.
 
-## What this guide covers
+The live guide currently includes:
+
+* OpenAI Codex
+* Claude Code
+* Hermes
+* Freebuff
+
+Freebuff is the dedicated free option covered by the guide. The other sections document separate agents and their own setup.
+
+## Core concepts
 
 ### Agent fundamentals
 
-Understand the basic components of an agent system:
+The guide covers the building blocks behind agent systems:
 
-* Model reasoning
+* Models and reasoning
 * Instructions and context
 * Tool use
 * Memory
@@ -24,16 +33,16 @@ Understand the basic components of an agent system:
 * State and execution
 * Agent and environment interaction
 
-### Agent workflow
+### The agent loop
 
-A typical agent follows a loop similar to:
+A simple agent can be understood as a loop:
 
 ```text
 Goal
   ↓
 Understand the task
   ↓
-Decide the next action
+Choose the next action
   ↓
 Use a tool when needed
   ↓
@@ -42,11 +51,11 @@ Observe the result
 Continue or finish
 ```
 
-The exact workflow depends on the system. Not every agent needs every component.
+Real systems can be much more sophisticated, but the basic idea remains useful.
 
 ### Tools
 
-Tools allow an agent to interact with systems outside the model itself. Examples include:
+Tools let an agent interact with systems outside the model. Common examples include:
 
 * Web search
 * File operations
@@ -55,66 +64,71 @@ Tools allow an agent to interact with systems outside the model itself. Examples
 * Code execution
 * External services
 
-A useful agent should use tools only when they provide information or actions that the model cannot reliably provide on its own.
+A good agent uses a tool when the tool provides information or an action that the model cannot reliably provide on its own.
 
-### Memory
+### Memory and context
 
-Memory allows an agent to retain information beyond a single model call. This can include conversation history, task state, retrieved documents, or persistent user preferences.
+Memory can preserve information across model calls. Context provides the information needed for the current decision.
 
-Memory should have a clear purpose. Storing everything is not the same as having useful memory.
-
-### Retrieval and context
-
-Agents often need information that is not contained in the model context. Retrieval systems can locate relevant documents or data and provide them to the model when needed.
-
-The guide covers the relationship between retrieval, context, tool use, and agent decisions.
+Both need boundaries. More context is not automatically better, and storing everything does not create useful memory.
 
 ### Planning and execution
 
-Some tasks require multiple actions. Planning helps an agent break a larger goal into smaller steps and execute them in a controlled order.
+Some tasks need several actions. Planning helps an agent break a larger goal into manageable steps and execute them in a controlled order.
 
-Good agent design keeps planning proportional to the problem. Simple tasks should remain simple.
+The amount of planning should match the problem. Simple tasks should stay simple.
 
 ## Building an agent
 
 A practical development process is:
 
-1. Define the task clearly.
-2. Identify what the model can do directly.
-3. Identify the tools it actually needs.
+1. Define the task.
+2. Identify what the model can handle directly.
+3. Add only the tools the task actually needs.
 4. Define the state the agent must maintain.
-5. Implement the smallest useful execution loop.
+5. Build the smallest useful execution loop.
 6. Test normal and failure cases.
 7. Measure the results.
-8. Add complexity only when the system requires it.
+8. Add complexity only when the evidence justifies it.
 
-## Reliability
+## Reliable agent systems
 
-Agent systems can fail in ways that ordinary software does not. Common problems include incorrect tool selection, invalid arguments, incomplete plans, unexpected tool responses, and incorrect assumptions about external state.
+Agents can fail in ways that ordinary software does not. Common failures include incorrect tool selection, invalid arguments, incomplete plans, unexpected tool responses, and wrong assumptions about external state.
 
-Reliable systems therefore need validation, clear tool contracts, error handling, logging, bounded execution, and tests for failure cases.
+Reliable systems need:
 
-## Repository structure
+* Validation
+* Clear tool contracts
+* Error handling
+* Logging
+* Bounded execution
+* Failure tests
+* Useful observability
 
-The repository is organized around practical learning material and examples. Each addition should make an agent concept easier to understand or implement.
+The important question is not only whether an agent can complete a task. It is whether you can understand why it succeeded or failed.
 
-```text
-ai-agents-guide/
-├── README.md
-└── ...
-```
+## Working with coding agents
 
-The structure will grow only when new material requires it.
+The live guide focuses on practical workflows for coding agents:
+
+1. Give the agent the relevant context.
+2. State the goal and constraints clearly.
+3. Ask for a plan before large changes.
+4. Keep the requested change scoped.
+5. Review the generated work.
+6. Run tests and verify the result.
+
+Small tasks with clear instructions are usually easier to review and safer to execute.
 
 ## Learning approach
 
-The goal is to understand the engineering behind agent systems, not simply learn a particular framework.
+The goal is to understand the engineering behind agent systems rather than become dependent on a particular framework.
 
-The examples should make it possible to understand what the model is doing, why a tool is being called, how state changes, and how the system handles failure.
+Examples should make it possible to see what the model is doing, why a tool is being called, how state changes, and how the system handles failure.
 
 ## Status
 
-This repository is an evolving guide. New concepts and practical examples will be added as the material develops.
+This repository is an evolving guide. New material will be added as the tools and practices covered here change.
 
 ## License
 
