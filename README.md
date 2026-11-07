@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/ai-agents-guide-hero.svg" alt="AI Agents Guide: four coding agents, Codex, Claude Code, Hermes and Freebuff, working around an orchestrator terminal" width="100%">
+  <img src="assets/ai-agents-guide-hero.svg?v=3" alt="AI Agents Guide: four coding agents, Codex, Claude Code, Hermes and Freebuff, working around an orchestrator terminal" width="100%">
 </p>
 
 # AI Agents Guide
