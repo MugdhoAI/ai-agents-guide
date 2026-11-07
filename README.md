@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/ai-agents-guide-hero.svg" alt="AI Agents Guide: four coding agents, Codex, Claude Code, Hermes and Freebuff, working around an orchestrator terminal" width="100%">
+</p>
+
 # AI Agents Guide
 
 A practical guide to understanding AI agents, working with coding agents, writing better prompts, and getting more reliable results.
