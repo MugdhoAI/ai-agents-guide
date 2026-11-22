@@ -72,6 +72,23 @@ Continue or finish
 
 Real systems can be much more sophisticated, but the basic idea remains useful.
 
+### A worked example
+
+The loop is easier to judge with a real task. Here is one pass through it for a common job: fixing a failing test in a small project.
+
+| Step | What the agent does | What you can observe |
+| --- | --- | --- |
+| Goal | Takes the task: make the failing test pass without changing its intent | The exact test name and the rule that the test itself is not edited |
+| Understand | Reads the test and the code it covers before touching anything | Which files it opened, and whether it opened the right ones |
+| Choose | Forms one hypothesis about the cause instead of editing at random | A stated cause you can agree or disagree with |
+| Act | Runs the failing test to reproduce the failure | The command it ran and the actual error output |
+| Observe | Compares the error with its hypothesis | Whether the evidence supports the cause it named |
+| Act | Makes the smallest edit that addresses that cause | A diff limited to the implicated code |
+| Observe | Reruns the failing test, then the surrounding test suite | Passing results, or a new failure it must explain |
+| Finish | Stops and reports what changed and what was verified | A summary that matches the diff and the test output |
+
+Two habits make this loop trustworthy. First, the agent reproduces the failure before it edits, so the fix is measured against a known broken state. Second, it stops when the goal is met instead of continuing into unrelated cleanup. If either habit is missing, the same loop can produce confident changes that nobody actually verified.
+
 ### Tools
 
 Tools let an agent interact with systems outside the model. Common examples include:
