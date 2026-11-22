@@ -23,6 +23,17 @@ The live guide currently includes:
 
 Freebuff is the free option covered by the guide. The other sections document separate agents and their own setup, including any required accounts, plans, or providers.
 
+## Which guide should you choose?
+
+| Guide | Cost and access | Where it runs | Start here if |
+| --- | --- | --- | --- |
+| [Freebuff](https://mugdhoai.github.io/ai-agents-guide/freebuff.html) | Free, supported by advertising, no subscription, credits, or API key required for the included products | CLI, desktop, web, cloud, and chat | You want to start coding with an agent today at no cost |
+| [OpenAI Codex](https://mugdhoai.github.io/ai-agents-guide/codex.html) | ChatGPT Plus, Pro, Business, Edu, or Enterprise plan, or separate API key access | CLI, desktop app, IDE extension, and web | You already have a ChatGPT plan and want approval and sandbox controls |
+| [Claude Code](https://mugdhoai.github.io/ai-agents-guide/claude-code.html) | Claude Pro, Max, Team, or Enterprise plan, or Anthropic Console API access. The free Claude plan does not include it | Terminal and desktop app on macOS, Windows, Linux, and WSL | You want a terminal agent with project context files and permission controls |
+| [Hermes Agent](https://mugdhoai.github.io/ai-agents-guide/hermes.html) | Your own supported provider credentials, or the Nous Portal subscription path. A model with at least 64K context is required | CLI and desktop, locally or on remote infrastructure | You want one agent that can switch model providers and add skills, memory, and gateways |
+
+Limits and plan details change over time, so confirm the current terms on the official source linked from each guide before you rely on them.
+
 ## Start here
 
 If you want a free way to start using AI for coding, begin with the Freebuff guide on the live site. If you already use another agent, choose its guide and follow its own installation and account requirements.
